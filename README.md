@@ -6,7 +6,7 @@ This tournament code was originally developed by Jinkun Geng and modified by Jac
 How this works:
 Your task is to write a bidding strategy, following the template in exampleStrats; i.e., you will implement a function called strategy. We will run your strategy in a 10,000-round-repeated two-bidder single-item auction against some baseline auto-bidders (as shown in exampleStrats), and classmates' auto-bidders. We'll first explain the auction formats, the objective of value maximization, the return-on-investment (ROI) constraint, and then describe how scores are calculated and the task in more detail. You'll find some tips at the very bottom. Good luck!
 
-### 1) _Auction Formats_
+## _Auction Formats_
 
 In practice, ad auctions are complex and frequently evolving due to both engineering and economic considerations. As a result, it is often not feasible to legally commit to a fixed auction format. Accordingly, we do **not** specify the auction format a priori (see "Restrictions on Auction Format" below). Your auto-bidder must learn how to bid adaptively using feedback from prior rounds—this includes value, bid, payment, and allocation.
 
@@ -20,7 +20,7 @@ Your auto-bidder should be robust to **other** potential auction formats as well
 
 ---
 
-### 2) _Value Maximization with ROI Constraints_
+## _Value Maximization with ROI Constraints_
 
 Advertisers in practice care not only about maximizing utility but also about maximizing **value** subject to spending efficiency. For each auction, the two bidders are independently assigned a return-on-investment (ROI) constraint, denoted as $\gamma_i$, drawn uniformly at random from the interval $[1, 2]$. Note that you only know your own ROI factor, but not your opponent's.
 
@@ -39,7 +39,7 @@ You can safely assume that your **payment is always less than or equal to your b
 **Important:** _Do not write code that directly inspects or manipulates the auction format, the optimization objective, or your opponent’s strategy._
 
 
-### Score Calculation
+## Score Calculation
 
 Your final score is equal to your total **value** accumulated across 10,000 auction rounds **only if** your ROI constraint is satisfied.  
 If the ROI constraint is violated, your score is **$0$**.
@@ -73,13 +73,26 @@ You can check the auctionStrats folder to see how we implement these three modes
 In our gradescope test, we may include new auction modes.
 
 
-### Tasks
+## Tasks
 
 You are expected to write a Python file named `strategy.py` (**Please keep this name!**). In this file, you are expected to implement a function named `strategy`. After you finish your code, put the `strategy.py` file into the folder `exampleStrats`, and run the `game_run.py`.
 
 ---
 
-### Intuition
+## Inputs to Your Strategy Function
+
+Your strategy function will receive the following:
+- `total_value`: Your current accumulated value
+- `total_payment`: Your current accumulated payment
+- `roi_constraint`: Your required ROI constraint $\gamma$
+- `myHistory`: Auction history of previous rounds
+
+You may choose to use or ignore the provided information to help you design a better strategy.
+
+---
+
+
+## Intuition
 
 You want to adjust your bidding strategy based on the current **value-to-spending ratio**. 
 
@@ -117,17 +130,6 @@ You want to adjust your bidding strategy based on the current **value-to-spendin
 
 ---
 
-### Inputs to Your Strategy Function
-
-Your strategy function will receive the following:
-- `total_value`: Your current accumulated value
-- `total_payment`: Your current accumulated payment
-- `roi_constraint`: Your required ROI constraint $\gamma$
-- `history`: Auction history of previous rounds
-
-You may choose to use or ignore the provided information to help you design a better strategy.
-
----
 
 ### Optional: Advanced Strategies
 
