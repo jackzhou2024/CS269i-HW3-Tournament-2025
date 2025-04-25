@@ -1,6 +1,6 @@
 # Auction Auto-bidding Tournament
 
-This tournament code was originally developed by Jinkun Geng and modified by Jack Zhou for the value-maximizing and ROI setting.
+This tournament code was originally developed by Jinkun Geng and modified by Jack Zhou for the value-maximizing setting with ROI constraints.
 
 
 How this works:
