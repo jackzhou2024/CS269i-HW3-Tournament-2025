@@ -106,9 +106,7 @@ You want to adjust your bidding strategy based on the current **value-to-spendin
 1. **Bid Shading**  
    Uses a gradient-based method to maintain a shading factor $\mu$.  
    Suppose the private value of the current round is $v$, the strategy bids:
-   $$
-   \frac{v}{\mu + 1}
-   $$
+   $\frac{v}{\mu + 1}$
    - $\mu$ **increases** when spending is too fast  
    - $\mu$ **decreases** when spending is too slow
 
