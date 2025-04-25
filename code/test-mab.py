@@ -15,6 +15,12 @@ mab = MAB(arms, LearningPolicy.UCB1(alpha=1.25))
 # Train
 mab.fit(decisions, rewards)
 
+# Add data
+added_decisions = ['Arm1', 'Arm2']
+added_rewards = [1, 2]
+
+mab.partial_fit(added_decisions, added_rewards)
+
 # Test
 p = mab.predict()
 print(p)
