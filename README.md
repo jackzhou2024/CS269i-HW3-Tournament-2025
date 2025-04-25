@@ -22,7 +22,7 @@ Your auto-bidder should be robust to **other** potential auction formats as well
 
 ## _Value Maximization with ROI Constraints_
 
-Advertisers in practice care not only about maximizing utility but also about maximizing **value** subject to spending efficiency. For each auction, the two bidders are independently assigned a return-on-investment (ROI) constraint, denoted as $\gamma_i$, drawn uniformly at random from the interval $[1, 2]$. Note that you only know your own ROI factor, but not your opponent's.
+Advertisers in practice care not only about maximizing utility but also about maximizing **value** subject to spending efficiency. For each matchup, the two bidders are independently assigned a return-on-investment (ROI) constraint, denoted as $\gamma_i$, drawn uniformly at random from the interval $[1, 2]$. Note that you only know your own ROI factor, but not your opponent's.
 
 Your bidding strategy must ensure that your **total payment** over all rounds does not exceed your **total value** divided by your ROI constraint, i.e., total payment $\le$ total value / $\gamma$.
 
