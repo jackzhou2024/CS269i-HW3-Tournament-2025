@@ -82,9 +82,9 @@ You are expected to write a Python file named `strategy.py` (**Please keep this 
 ## Inputs to Your Strategy Function
 
 Your strategy function will receive the following:
-- `total_value`: Your current accumulated value
-- `total_payment`: Your current accumulated payment
-- `roi_constraint`: Your required ROI constraint $\gamma$
+- `totalValue`: Your current accumulated value
+- `totalPayment`: Your current accumulated payment
+- `ROI`: Your required ROI constraint $\gamma$
 - `myHistory`: Auction history of previous rounds
 
 You may choose to use or ignore the provided information to help you design a better strategy.
