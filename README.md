@@ -70,7 +70,7 @@ $p_L$ += $b_L$.
 
 You can check the auctionStrats folder to see how we implement these three modes to decide the allocation result (i.e., who is the winner) and the payment.
 
-In our gradescope test, we may include new auction modes.
+In our tournament, we may include new auction modes.
 
 
 ## Tasks
