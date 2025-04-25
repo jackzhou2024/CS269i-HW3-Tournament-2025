@@ -131,7 +131,7 @@ You want to adjust your bidding strategy based on the current **value-to-spendin
 
 ### Optional: Advanced Strategies
 
-If you want to explore more sophisticated strategies, consider using **Multi-Arm Bandit (MAB)** algorithms. These are well-suited for optimization in uncertain and dynamic environments.
+If you want to explore more sophisticated strategies, consider using **Multi-Arm Bandit (MAB)** algorithms. These are well-suited for optimization in uncertain and dynamic environments. The theory of MAB is covered in Lecture 3.
 
 You can use the **MABWiser** library for this purpose.  
 We will install this library in our testing environment.
