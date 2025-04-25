@@ -36,7 +36,7 @@ You can safely assume that your **payment is always less than or equal to your b
 
 ---
 
-**Important:** _Do not write code that directly inspects or manipulates the auction format, the optimization objective, or your opponent’s strategy. **(In other words, no hacking: your code should behave like a legitimate bidding strategy, not try to exploit information or the system itself.)**_
+**Important:** _Do not write code that directly inspects or manipulates the auction format, the optimization objective, or your opponent’s strategy. **(In other words, no hacking: your code should behave like a legitimate bidding strategy, and should not attempt to exploit unauthorized information or manipulate the system itself.)**_
 
 
 ## Score Calculation
